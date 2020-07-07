@@ -69,6 +69,10 @@ public class Sort {
         {
             Quick3Sort.Quick3Sort(a);
         }
+        if(alg.equals("HeapSort"))
+        {
+            HeapSort.heapsort(a);
+        }
         double endTime=System.currentTimeMillis();
         return (endTime-startTime);                            //计算所用时间
     }
@@ -98,6 +102,7 @@ public class Sort {
     public static void main(String args[])
     {
 
+ /*
         Scanner sc = new Scanner(System.in);                 //Java标准输入
         int T = sc.nextInt();
         int N = sc.nextInt();
@@ -108,16 +113,15 @@ public class Sort {
         double t5 = timeRandomInput("MergeSortBU",N,T);
         double t6 = timeRandomInput("QuickSort",N,T);
         double t7 = timeRandomInput("Quick3way",N,T);
-
- /*
+*/
         Random r = new Random();                              //创建随机数种子
         Comparable [] a = new Comparable[20];
-        for(int i=0; i<20; i++)
+        for(int i=1; i<20; i++)
         {
             a[i] = r.nextInt(100);                  //随机数在0-100之间的double数
         }
-        Quick3Sort(a);
+      HeapSort.heapsort(a);
         show(a);
-*/
+
     }
 }
